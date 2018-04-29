@@ -1,0 +1,25 @@
+<% if current_user.user_type == "Shipping" %>
+
+	<%= form_for @boat, html: {multipart: true} do |f| %>
+	<div class="formField">
+
+		<%= f.label :name %>: <br>
+		<%= f.text_field :name %> <br>
+		<%= f.label "Number of Containers" %>: <br>
+		<%= f.text_field :container %> <br>
+		<%= f.label :location %>: <br>
+		<%= hidden_field_tag 'user', 2 %>
+		<br>
+		<%= f.file_field :image %> <br>
+	</div>
+		<%= f.submit "Create New Job" %>
+	<% end %>
+
+	<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true }) do |f| %>
+
+
+<% else %>
+
+	<h1>Error: You do not have access to view this page</h1>
+
+<% end %>

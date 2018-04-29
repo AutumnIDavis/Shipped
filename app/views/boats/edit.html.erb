@@ -1,0 +1,24 @@
+<div class="mainContainer">
+
+  	<h2> Update your information: </h2>
+
+    <div class="formField">
+      	<%= form_for @boat do |f| %><br>
+
+        <%= f.label "Name of Boat:" %> <br>
+      		<%= f.text_field :name %> <br><br><br>
+
+      		<%= f.label "Number of Containers:" %> <br>
+      		<%= f.text_field :capacity %> <br><br><br>
+
+          <%= f.label "Location of Boat:" %> <br>
+          <%= f.text_field :location %> <br><br><br>
+
+
+         <br><br><br>
+
+      		<%= f.submit "Update Boat" %>
+          <br>
+      	<% end %>
+      </div>
+    </div>

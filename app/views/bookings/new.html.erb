@@ -1,0 +1,24 @@
+<div class="mainContainer">
+    <p id="notice"><%= notice %></p>
+        <h1>New Booking</h1>
+
+        <% if current_user %>
+
+          <%= form_for @booking, html: {multipart: true} do |f| %>
+
+          <div class="formField">
+
+
+          </div>
+
+
+          <br><br>
+          <% end %>
+        <% end %>
+
+
+        <%= render 'form', booking: @booking %>
+<br><br>
+        <%= link_to 'Back', bookings_path %>
+
+</div>

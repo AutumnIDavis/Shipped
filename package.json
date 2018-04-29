@@ -1,0 +1,7 @@
+{
+  "name": "shipped",
+  "private": true,
+  "dependencies": {
+    "rails-ujs": "^5.2.0"
+  }
+}

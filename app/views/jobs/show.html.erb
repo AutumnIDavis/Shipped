@@ -1,0 +1,32 @@
+<div class="mainContainer">
+    <p id="notice"><%= notice %></p>
+
+
+        <div class="row" id="widen">
+          <div class="col-md-12">
+            <div class="showField">
+
+
+
+      <% if current_user %>
+          <div class="row" id="widen">
+            <div class="col-md-12">
+              <div class="showField">
+                Name: <%= @job.name %><br><br>
+                Origin: <%= @job.origin %><br><br>
+                Destination: <%= @job.destination %><br><br>
+                Containers Needed: <%= @job.capacity %><br><br>
+                Price: $<%= @job.cost %><br><br>
+                Description: <%= @job.description %><br><br>
+              </div>
+
+            </div>
+          </div>
+       <% end %>
+  <br>
+    <%= link_to 'Edit', edit_job_path(@job) %> |
+    <%= link_to 'Back', jobs_path %> |
+    <%= link_to 'Delete',  { action: :destroy, id: @job.id }, method: :delete, data: { confirm: 'Are You Sure?' }, :class=>"btn-success btn btn-github" %>  </div>
+
+
+  </div>

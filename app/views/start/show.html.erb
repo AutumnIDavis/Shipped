@@ -1,0 +1,11 @@
+<div class="indexForm">
+<h1 id="indexTitle"> <%= @user.firstname.capitalize %>'s Profile </h2>
+	<div class="formFields">
+			<br>
+					Username: <%= @user.username %> <br>
+					<%= image_tag @user.avatar.url(:thumb), class: "prof_img" %><br>
+	</div>
+	<div id="editUserShow">
+		<%= link_to 'Edit', edit_user_registration_path(), :class => 'btn btn-github' %>
+	</div>
+</div>

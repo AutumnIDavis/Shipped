@@ -1,0 +1,204 @@
+body {
+  background-color: white;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  background: url("epic-ship.jpeg") center center fixed;
+  font-family: 'Amatic SC', cursive;
+}
+
+body img{
+  position: relative;
+  top: 30px;
+  display: inline;
+  left: 0%;
+  width: 380px;
+  height: 380px;
+  flex-wrap: wrap;
+  z-index: 0;
+}
+
+#Logo p {
+font-size: 15px;
+color: white;
+}
+
+#Logo img{
+  position: fixed;
+  top: 0;
+  display: inline;
+  left: 6%;
+  width: 157px;
+  height: 140px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+header{
+  background-color: rgba(0, 0, 0, 0.70);
+  margin: -3% -3%;
+  border: solid black 1px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  font-weight: 30px;
+  position: fixed;
+  width: 103%;
+  top: 30px;
+}
+
+#jobTable a{
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  font-weight: 30px;
+  padding: 32%;
+  color: #000406;
+}
+
+#boatTable a{
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  font-weight: 30px;
+  padding: 32%;
+  color: #000406;
+}
+
+table, th, td {
+   margin: 12%;
+}
+
+header a{
+  text-decoration: none;
+  color: #fcf3f4;
+  font-size: 30px;
+  text-shadow: -5px 2px 8px black;
+  font-family: 'Amatic SC', cursive;
+}
+
+ul{
+  text-align: right;
+  padding: 0% 3%;
+  font-family: 'Amatic SC', cursive;
+}
+
+li {
+  list-style: none;
+  justify-content: center;
+  margin: 30px;
+  padding: -5px 15px 17px;
+  display: inline-block;
+  font-size: 41px;
+  color: white;
+  text-shadow: -3px 3px 9px black;
+}
+
+.mainContainer{
+  margin: 10% 32%;
+  background-color: #f5deb3d9;
+  padding: 4% 5% 6%;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  color: black;
+  font-size: 20px;
+  box-shadow: -5px 5px 16px #000000a6;
+  text-shadow: -3px 3px 6px #0000004a;
+}
+
+.field{
+  margin: 5%;
+}
+
+.formField textarea{
+  width: 100%;
+  height: 132px;
+}
+
+.formField p{
+  display: inline-block;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    // background-color: #000;
+  }
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding: 0 5px 7px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
+}
+
+footer{
+  opacity: 0.6;
+  color: white;
+  font-family: 'Amatic SC', cursive;
+  position: fixed;
+  text-align: center;
+  bottom: 0px;
+  width: 100%;
+  left: 0%;
+  height: 60px;
+  background: #0000007d;
+}

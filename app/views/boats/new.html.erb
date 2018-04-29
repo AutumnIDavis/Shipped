@@ -1,0 +1,27 @@
+
+<div class="mainContainer">
+
+	<% if current_user %>
+
+		<%= form_for @boat, html: {multipart: true} do |f| %>
+		<div class="formField">
+
+		<%= f.label "Name of Boat:" %> <br>
+		<%= f.text_field :name %> <br><br><br>
+
+		<%= f.label "Number of Containers:" %> <br>
+		<%= f.text_field :capacity %> <br><br><br>
+
+		<%= f.label "Location of Boat:" %> <br>
+		<%= hidden_field_tag 'user', 2 %>
+
+		<%= f.select :location, [["Penns Landing, PA, USA","Penns Landing, PA, USA" ], ["Neverland, 2nd Star to the Right", "Neverland, 2nd Star to the Right"], ["San Antonio, TX, USA", "San Antonio, TX, USA"], ["Frankfurt, Germany", "Frankfurt, Germany"], ["Hong Kong, China", "Hong Kong, China"], ["London, Paris", "London, Paris"] ] %> <br><br>
+		</div>
+<%= f.file_field :image %> <br>
+		<br><br>
+
+			<%= f.submit "Create New Boat" %>
+		<% end %>
+	<% end %>
+
+</div>

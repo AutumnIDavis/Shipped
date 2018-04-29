@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shipped</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+  <body>
+
+    <header>
+      <br><br><br>
+      <div id="Logo">
+          <%= image_tag "ASK Shipping Co.jpg" %>
+         <p style= "font-family: 'Amatic SC', cursive; color: white; padding:0px 286px;font-size:  50px;position:  fixed;top: 0px;z-index:  2;">  <marquee behavior="scroll" direction="left" style= "padding: 6%;">ASK Shipping Co</marquee>
+
+           <!-- Custom Logo by: AUTUMN DAVIS, with inspiration by KOBI & SARAH-->
+         </p>
+      </div>
+
+        <ul>
+            <% if current_user %>
+                <li><a href="/boats" style= "color: #fcf3f4;" >Boats</a></li>
+                <li><a href="/jobs" style= "color: #fcf3f4;" >Jobs</a></li>
+                <li><a href="/bookings" style= "color: #fcf3f4;" >Bookings</a></li>
+                <li><a href="/users/edit" style= "color: #fcf3f4;" >Account</a></li>
+                <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+              <% else %>
+                  <li><a href="/users/sign_in" style= "color: #fcf3f4;" >Sign-In</a></li>
+              <% end %>
+        </ul>
+    </header>
+
+    <footer>
+        <div class="Footer">
+            <p><em>Autumn | Sarah | Kobi </em><br> © Copyright 2018</p>
+        </div>
+    </footer>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+<%= form_for @booking, url: bookings_path do |f| %>
+
+<%= select :booking, "boat_id", boatsMethod  %>
+<%= select  :booking, "job_id", jobsMethod  %>
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,28 @@
+<div class="mainContainer">
+    <p id="notice"><%= notice %></p>
+    <h1>Bookings</h1>
+    <%= link_to 'New Booking', new_booking_path %><br><br><br><br>
+    <table>
+      <tbody>
+        <% @bookings.each do |booking| %>
+
+        <div class="formFields"><br>
+           <%= @job %> <br><br>
+           <%= @boat %>
+
+        </div>
+
+
+          <div class="formFields">
+            Boat: <%= booking.boat %><br><br>
+            Job: <%= booking.job %><br>
+              <tr><br>
+                <%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <br><br><br><br><br>
+              </tr>
+          </div>
+
+        <% end %>
+      </tbody>
+  </table>
+</div>

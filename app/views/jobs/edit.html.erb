@@ -1,0 +1,33 @@
+<div class="mainContainer">
+
+  	<h2> Update your information: </h2>
+
+      <div class="formField">
+        <%= form_for @job do |f| %><br>
+
+        <%= f.label "Name:" %> <br>
+        <%= f.text_field :name %> <br><br><br>
+
+        <%= f.label "Origin:" %> <br>
+        <%= f.select :origin, [["Penns Landing, PA, USA","Penns Landing, PA, USA" ], ["Neverland, 2nd Star to the Right", "Neverland, 2nd Star to the Right"], ["San Antonio, TX, USA", "San Antonio, TX, USA"], ["Frankfurt, Germany", "Frankfurt, Germany"], ["Hong Kong, China", "Hong Kong, China"], ["London, Paris", "London, Paris"] ] %>
+        <br><br><br>
+
+
+
+        <%= f.label "Destination:" %> <br>
+        <%= f.select :destination_id, [["Penns Landing, PA, USA","Penns Landing, PA, USA" ], ["Neverland, 2nd Star to the Right", "Neverland, 2nd Star to the Right"], ["San Antonio, TX, USA", "San Antonio, TX, USA"], ["Frankfurt, Germany", "Frankfurt, Germany"], ["Hong Kong, China", "Hong Kong, China"], ["London, Paris", "London, Paris"] ] %>
+        <br><br><br>
+
+          <%= f.label "Container Capacity:" %> <br>
+          <%= f.text_field :capacity %> <br><br><br>
+
+
+          <div id="descriptText">
+            <%= f.label "Description:" %> <br>
+            <%= f.text_area :description, minlength: 50 %> <br><br><br>
+          </div>
+
+
+      		<%= f.submit "Update Job" %>
+      	<% end %>
+      </div>

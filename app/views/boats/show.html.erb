@@ -1,0 +1,24 @@
+
+<div class="mainContainer">
+
+		<% if current_user %>
+
+			<% content_for :title, "Boat - " + @boat.name %>
+			<div class="row" id="widen">
+				<div class="col-md-12">
+					<div class="showField">
+						Name: <%= @boat.name %><br><br>
+						Containers: <%= @boat.capacity %><br><br>
+						Location: <%= @boat.location %><br><br>
+
+				<%= image_tag @boat.image.url  %>
+<br><br><br><br><br>
+			<%=link_to 'Edit', edit_boat_path(params[:id]), :class=>"btn-success btn btn-github" %>
+
+			<%= link_to 'Delete',  { action: :destroy, id: @boat.id }, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn-success btn btn-github" %>
+
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>

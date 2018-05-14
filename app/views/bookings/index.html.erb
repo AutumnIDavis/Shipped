@@ -1,7 +1,25 @@
 <div class="mainContainer">
     <p id="notice"><%= notice %></p>
     <h1>Bookings</h1>
-    <%= link_to 'New Booking', new_booking_path %><br><br><br><br>
+    <!-- <%= link_to 'New Booking', new_booking_path %><br><br><br><br> -->
+    <% if current_user %>
+
+      <%= form_for @booking, html: {multipart: true} do |f| %>
+
+      <div class="formField">
+
+
+      </div>
+
+
+      <br><br>
+      <% end %>
+    <% end %>
+
+
+    <%= render 'form', booking: @booking %>
+
+
     <table>
       <tbody>
         <% @bookings.each do |booking| %>
@@ -9,15 +27,14 @@
         <div class="formFields"><br>
            <%= @job %> <br><br>
            <%= @boat %>
-
         </div>
 
 
-          <div class="formFields">
-            Boat: <%= booking.boat %><br><br>
-            Job: <%= booking.job %><br>
+          <div class="formFields" id="destroyujs">
+            Boat: <%= booking.boat.name %><br><br>
+            Job: <%= booking.job.name %><br>
               <tr><br>
-                <%= link_to "Destroy", booking, method: :delete, remote:true, confirm:"Are you sure?" %>
+                <%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %>
                 <br><br><br><br><br>
               </tr>
           </div>

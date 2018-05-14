@@ -29,6 +29,7 @@ gem "bookable"
 
 gem 'paperclip', github: 'thoughtbot/paperclip'
 
+gem 'jquery-rails'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

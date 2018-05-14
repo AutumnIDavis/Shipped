@@ -25,16 +25,16 @@ class BoatsController < ApplicationController
 
 
 
-def create
-  p 'BOATPARAMS'
-  p boat_params
-  	@boat = Boat.new(boat_params)
-  	@user = User.find_by_id(current_user.id)
-  	p @boat
-  	@boat.user = @user
-    	@boat.save
-    		redirect_to boats_path
-    end
+  def create
+   p 'boat_params'
+   p boat_params
+       @boat = current_user.boats.new(boat_params)
+       @user = User.find_by_id(current_user.id)
+       p @boat
+       @boat.user = @user
+         @boat.save
+             redirect_to boats_path
+     end
 
 
   # PATCH/PUT /boats/1

@@ -9,5 +9,6 @@ class Boat < ApplicationRecord
  	:styles => { :medium => "30x30>", :thumb => "50x50>" },
  	:default_url => "/images/no_image.png"
 
+  validates_uniqueness_of :name
 	do_not_validate_attachment_file_type :image
 end

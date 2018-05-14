@@ -21,7 +21,7 @@ include BookingsHelper
     @bookings = Booking.all
     @boat = Boat.all
     @job = Job.all
-  end
+  end                                                         
 
 
   def create

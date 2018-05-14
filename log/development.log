@@ -5517,3 +5517,1161 @@ Processing by BookingsController#index as HTML
 Completed 200 OK in 52ms (Views: 46.4ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/bookings" for 127.0.0.1 at 2018-05-14 13:06:05 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.3ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (61.7ms)
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mCACHE Boat Load (0.0ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (86.1ms)
+Completed 200 OK in 459ms (Views: 370.7ms | ActiveRecord: 12.4ms)
+
+
+Started DELETE "/bookings/14" for 127.0.0.1 at 2018-05-14 13:06:40 -0400
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C8Mo+6QNpqPfFJTRqyy/0zh4DUWQfCa38NwEN0mzwPLvv6p1KqEp19w0sVdMpVMxkXNAYupUwWE1AKZTcVI1eA==", "id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:52
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bookings_controller.rb:53
+  [1m[36mBooking Destroy (0.7ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/bookings_controller.rb:53
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/bookings_controller.rb:53
+Redirected to http://localhost:3000/bookings
+Completed 302 Found in 79ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2018-05-14 13:06:40 -0400
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.3ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (42.8ms)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (56.4ms)
+Completed 200 OK in 103ms (Views: 96.5ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/bookings" for 127.0.0.1 at 2018-05-14 13:06:43 -0400
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C/MqKNJFIN9HTK1d8cVdPlpNGkH+ldF7LEcH2YDGrfTvj6imXOmvq0RsiNsWTLHc80ZXZoS9Nq3pm6W9uCdYfg==", "booking"=>{"boat_id"=>"1", "job_id"=>"2"}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."job_id" = ? AND "bookings"."boat_id" = ? ORDER BY "bookings"."id" ASC LIMIT ?[0m  [["job_id", 2], ["boat_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bookings_controller.rb:38
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:38
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:38
+  [1m[36mBooking Create (0.5ms)[0m  [1m[32mINSERT INTO "bookings" ("boat_id", "job_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["boat_id", 1], ["job_id", 2], ["created_at", "2018-05-14 17:06:43.468880"], ["updated_at", "2018-05-14 17:06:43.468880"]]
+  ↳ app/controllers/bookings_controller.rb:38
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/bookings_controller.rb:38
+Redirected to http://localhost:3000/bookings
+Completed 302 Found in 17ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2018-05-14 13:06:43 -0400
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (4.4ms)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mCACHE Boat Load (0.0ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 92ms (Views: 82.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2018-05-14 16:07:15 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (67.9ms)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mCACHE Boat Load (0.0ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (95.0ms)
+Completed 200 OK in 409ms (Views: 312.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/boats" for 127.0.0.1 at 2018-05-14 16:07:17 -0400
+Processing by BoatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering boats/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.3ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/views/boats/index.html.erb:17
+  Rendered boats/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 47ms (Views: 39.7ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-05-14 16:07:18 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AbK7UGiLKxtQ1U7RZp4fo6IhGpmZasGUqoRlgme2137lzjne5iekb1P1a1eBF/NBCypXvuNCJkJvWMfmX1ci9A=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:07:18 -0400
+Processing by BookingsController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-14 16:07:18 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-14 16:07:19 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J9a0lsIgekXoLYbqHZQeRXgxpiwzvFAf1Z3g+ZOGbH8UJaNJnTZnc5yVicjGU3h5vwzBBGp0ZjyqwZETtw6wKw==", "user"=>{"email"=>"foreverautumn16@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "foreverautumn16@outlook.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-05-14 20:07:19.813428"], ["last_sign_in_at", "2018-05-14 15:55:45.083575"], ["sign_in_count", 3], ["updated_at", "2018-05-14 20:07:19.831065"], ["id", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 186ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:07:19 -0400
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.3ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (3.6ms)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mCACHE Boat Load (0.0ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 68ms (Views: 59.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-05-14 16:11:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/tasks"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2018-05-14 16:12:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/tasks"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2018-05-14 16:12:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/tasks"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2018-05-14 16:12:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/tasks"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2018-05-14 16:12:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/tasks"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:30:34 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (45.8ms)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mBoat Load (0.4ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mCACHE Boat Load (0.0ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (63.4ms)
+Completed 200 OK in 322ms (Views: 248.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/boats" for 127.0.0.1 at 2018-05-14 16:30:40 -0400
+Processing by BoatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering boats/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.3ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/views/boats/index.html.erb:17
+  Rendered boats/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 64ms (Views: 58.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/boats/new" for 127.0.0.1 at 2018-05-14 16:30:44 -0400
+Processing by BoatsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering boats/new.html.erb within layouts/application
+  Rendered boats/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 61ms (Views: 49.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/boats" for 127.0.0.1 at 2018-05-14 16:30:51 -0400
+Processing by BoatsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tm/MbAemC25HnUzW9gGw/I4U8DqUqyoI7sIkilIl7dKQln6+hLqqo4bKio6rjT9/QEB0gOk1NwDIYI65UIwvPw==", "boat"=>{"name"=>"blank", "capacity"=>"342", "location"=>"Neverland, 2nd Star to the Right"}, "user"=>"2", "commit"=>"Create New Boat"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/boats_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boats_controller.rb:35
+  [1m[36mBoat Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "boats" WHERE "boats"."name" = ? LIMIT ?[0m  [["name", "blank"], ["LIMIT", 1]]
+  ↳ app/controllers/boats_controller.rb:35
+  [1m[36mBoat Create (0.5ms)[0m  [1m[32mINSERT INTO "boats" ("created_at", "updated_at", "name", "capacity", "location", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2018-05-14 20:30:51.259382"], ["updated_at", "2018-05-14 20:30:51.259382"], ["name", "blank"], ["capacity", 342], ["location", "Neverland, 2nd Star to the Right"], ["user_id", 1]]
+  ↳ app/controllers/boats_controller.rb:35
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/boats_controller.rb:35
+Redirected to http://localhost:3000/boats
+Completed 302 Found in 21ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/boats" for 127.0.0.1 at 2018-05-14 16:30:51 -0400
+Processing by BoatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering boats/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/views/boats/index.html.erb:17
+  Rendered boats/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 58ms (Views: 53.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2018-05-14 16:30:53 -0400
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.3ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (3.8ms)
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.3ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mCACHE Boat Load (0.0ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 66ms (Views: 59.3ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/bookings" for 127.0.0.1 at 2018-05-14 16:30:55 -0400
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jzhF1f84qTPJGhzcTU5mI5bkKZZpy8iWpUVJXk0lNvKdGZe7kVg9xrj3/rymAfyjoJRH7LkThWUqg07Y4ssqow==", "booking"=>{"boat_id"=>"1", "job_id"=>"1"}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."job_id" = ? AND "bookings"."boat_id" = ? ORDER BY "bookings"."id" ASC LIMIT ?[0m  [["job_id", 1], ["boat_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:28
+  [1m[36mBoat Load (0.3ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:31
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:31
+Redirected to http://localhost:3000/bookings
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2018-05-14 16:30:55 -0400
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (2.8ms)
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mCACHE Boat Load (0.0ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 55ms (Views: 48.7ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/bookings/1" for 127.0.0.1 at 2018-05-14 16:31:00 -0400
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"doC+K9HugB318+Gl5Eb+y1hkSWrzeyytHPvQTRez+tbvm7ydqxuyL0CgyRTFGtOMhy/58t/WJQUi8gqfKFTA7w==", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:52
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bookings_controller.rb:53
+  [1m[36mBooking Destroy (0.4ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/bookings_controller.rb:53
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/bookings_controller.rb:53
+Redirected to http://localhost:3000/bookings
+Completed 302 Found in 11ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2018-05-14 16:31:00 -0400
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.6ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (5.9ms)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 56ms (Views: 50.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-05-14 16:31:10 -0400
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 36.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2018-05-14 16:31:11 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:85
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:24
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 61ms (Views: 49.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-05-14 16:31:15 -0400
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 61ms (Views: 54.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2018-05-14 16:31:17 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:85
+  [1m[36mCACHE Job Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:24
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 58ms (Views: 51.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/jobs/2" for 127.0.0.1 at 2018-05-14 16:31:20 -0400
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qjSefJQUxPahLI4G1KNfD/G2ZmZxn8TY/60BdSnJnPczL5zK7uH2xBR/prf1/3JILv3W/l0yzXDBpNunFi6mzg==", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:85
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:63
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."job_id" = ?[0m  [["job_id", 2]]
+  ↳ app/controllers/jobs_controller.rb:63
+  [1m[36mBooking Destroy (0.8ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = ?[0m  [["id", 15]]
+  ↳ app/controllers/jobs_controller.rb:63
+  [1m[36mJob Destroy (0.4ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/jobs_controller.rb:63
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:63
+Redirected to http://localhost:3000/jobs
+Completed 302 Found in 20ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-05-14 16:31:20 -0400
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 47ms (Views: 41.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2018-05-14 16:31:22 -0400
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.5ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (3.8ms)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 62ms (Views: 55.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/boats" for 127.0.0.1 at 2018-05-14 16:31:31 -0400
+Processing by BoatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering boats/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.3ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/views/boats/index.html.erb:17
+  Rendered boats/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 47ms (Views: 41.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-05-14 16:31:32 -0400
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 55ms (Views: 50.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2018-05-14 16:31:33 -0400
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 54ms (Views: 43.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2018-05-14 16:31:45 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"16FDtBH6HZD/bMyv/6EVmhZIp1oVri+rNlUsH7dva4CSc0oNrkJMh8Pw7ZJkn7d/Ob2QiswozYPmVmVDU7R4hg==", "job"=>{"name"=>"skjdb", "origin"=>"San Antonio, TX, USA", "destination"=>"Penns Landing, PA, USA", "cost"=>"2135", "capacity"=>"453", "description"=>"dsfsdfsd<tr>\r\n            <td><%= task.title %></td>\r\n            <td><%= task.description %></td>\r\n            <td><%= task.time %> min.</td>\r\n            <!-- <td><%= link_to 'Show', task %></td>\r\n            <td><%= '|' %></td>\r\n            <td><%= link_to 'Edit', edit_task_path(task) %></td> -->\r\n            <td><%= '|' %></td>\r\n            <td><%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>\r\n            <td><%= '|' %></td>\r\n          </tr><tr>\r\n            <td><%= task.title %></td>\r\n            <td><%= task.description %></td>\r\n            <td><%= task.time %> min.</td>\r\n            <!-- <td><%= link_to 'Show', task %></td>\r\n            <td><%= '|' %></td>\r\n            <td><%= link_to 'Edit', edit_task_path(task) %></td> -->\r\n            <td><%= '|' %></td>\r\n            <td><%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>\r\n            <td><%= '|' %></td>\r\n          </tr>"}, "commit"=>"Create New Job"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:33
+  [1m[36mJob Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jobs" WHERE "jobs"."name" = ? LIMIT ?[0m  [["name", "skjdb"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:33
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("created_at", "updated_at", "origin", "destination", "cost", "capacity", "user_id", "description", "name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2018-05-14 20:31:45.517608"], ["updated_at", "2018-05-14 20:31:45.517608"], ["origin", "San Antonio, TX, USA"], ["destination", "Penns Landing, PA, USA"], ["cost", 2135], ["capacity", 453], ["user_id", 1], ["description", "dsfsdfsd<tr>\r\n            <td><%= task.title %></td>\r\n            <td><%= task.description %></td>\r\n            <td><%= task.time %> min.</td>\r\n            <!-- <td><%= link_to 'Show', task %></td>\r\n            <td><%= '|' %></td>\r\n            <td><%= link_to 'Edit', edit_task_path(task) %></td> -->\r\n            <td><%= '|' %></td>\r\n            <td><%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>\r\n            <td><%= '|' %></td>\r\n          </tr><tr>\r\n            <td><%= task.title %></td>\r\n            <td><%= task.description %></td>\r\n            <td><%= task.time %> min.</td>\r\n            <!-- <td><%= link_to 'Show', task %></td>\r\n            <td><%= '|' %></td>\r\n            <td><%= link_to 'Edit', edit_task_path(task) %></td> -->\r\n            <td><%= '|' %></td>\r\n            <td><%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>\r\n            <td><%= '|' %></td>\r\n          </tr>"], ["name", "skjdb"]]
+  ↳ app/controllers/jobs_controller.rb:33
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:38
+  [1m[36mJob Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jobs" WHERE "jobs"."name" = ? AND "jobs"."id" != ? LIMIT ?[0m  [["name", "skjdb"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:38
+Redirected to http://localhost:3000/jobs/2
+Completed 302 Found in 20ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2018-05-14 16:31:45 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:85
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:24
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 47ms (Views: 40.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2018-05-14 16:31:47 -0400
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (4.4ms)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 55ms (Views: 48.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/bookings" for 127.0.0.1 at 2018-05-14 16:31:50 -0400
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZtsMYAzIgwC+bWZ08Ygz+S92rTzzyNJog9bLFEt28wh0+t4OYqgX9c+AhBQax6l5GQbDRiMQn5sMEMyS5JjvWQ==", "booking"=>{"boat_id"=>"1", "job_id"=>"2"}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."job_id" = ? AND "bookings"."boat_id" = ? ORDER BY "bookings"."id" ASC LIMIT ?[0m  [["job_id", 2], ["boat_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bookings_controller.rb:38
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:38
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:38
+  [1m[36mBooking Create (0.6ms)[0m  [1m[32mINSERT INTO "bookings" ("boat_id", "job_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["boat_id", 1], ["job_id", 2], ["created_at", "2018-05-14 20:31:50.087993"], ["updated_at", "2018-05-14 20:31:50.087993"]]
+  ↳ app/controllers/bookings_controller.rb:38
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/bookings_controller.rb:38
+Redirected to http://localhost:3000/bookings
+Completed 302 Found in 19ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2018-05-14 16:31:50 -0400
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.3ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (3.6ms)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 56ms (Views: 50.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/boats" for 127.0.0.1 at 2018-05-14 16:31:51 -0400
+Processing by BoatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering boats/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.3ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/views/boats/index.html.erb:17
+  Rendered boats/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 49ms (Views: 43.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-05-14 16:32:07 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"onwSFb8pbzfbM6ex6paNwcXbM6uGcveer8KqJe1mYss7ZxCjxdxdBW5gjwDLyqCGGpCDM6rf/jaRy3D30oFY8g=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:32:08 -0400
+Processing by BookingsController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-14 16:32:08 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-14 16:32:12 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LJibpnb7haOUVWSfvqLGHFUsKrKSBCyXvw1GjzWzaI5PWsMrbPLJzFBxBNZ3kmvyTO4ST/jvX1NqOYW+D0FDuw==", "user"=>{"email"=>"foreverautumn16@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "foreverautumn16@outlook.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-05-14 20:32:12.326453"], ["last_sign_in_at", "2018-05-14 20:07:19.813428"], ["sign_in_count", 4], ["updated_at", "2018-05-14 20:32:12.327344"], ["id", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 167ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:32:12 -0400
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.4ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (3.2ms)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 54ms (Views: 48.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/boats" for 127.0.0.1 at 2018-05-14 16:32:16 -0400
+Processing by BoatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering boats/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.3ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/views/boats/index.html.erb:17
+  Rendered boats/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 59ms (Views: 53.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-05-14 16:32:21 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3HNtVcWxcF6cyxZjOvamhMXs2gJQcXthn1MIjDKJdImWmiSIyOMYoYEd45qhG411SVS7IRRvOY+GkshkJYPKQA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:32:21 -0400
+Processing by BookingsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-14 16:32:21 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:33:35 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by BookingsController#index as HTML
+Completed 401 Unauthorized in 18ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-14 16:33:35 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 290ms (Views: 249.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-14 16:33:38 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dPaRit74mzSim3ELQI33kUGC0B5CvBaNtPuQtonwDr2+tWPkvqGy/K8kkKixB+cONOWd4wngiTEplxJRYDcgxQ==", "user"=>{"email"=>"foreverautumn16@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "foreverautumn16@outlook.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-05-14 20:33:38.606419"], ["last_sign_in_at", "2018-05-14 20:32:12.326453"], ["sign_in_count", 5], ["updated_at", "2018-05-14 20:33:38.607627"], ["id", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 186ms (ActiveRecord: 16.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:33:38 -0400
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (32.4ms)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.3ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 100ms (Views: 84.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/boats" for 127.0.0.1 at 2018-05-14 16:33:41 -0400
+Processing by BoatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering boats/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.3ms)[0m  [1m[34mSELECT "boats".* FROM "boats" WHERE "boats"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/boats/index.html.erb:17
+  Rendered boats/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 79ms (Views: 49.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/boats/new" for 127.0.0.1 at 2018-05-14 16:33:42 -0400
+Processing by BoatsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering boats/new.html.erb within layouts/application
+  Rendered boats/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 55ms (Views: 49.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/boats" for 127.0.0.1 at 2018-05-14 16:33:49 -0400
+Processing by BoatsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QuidkWBqFDdaPJgnQrah1BNw8ML2JwcLPI5p/4LQKKY4qKH2eMeWYdDddQSXxIrTs2iJZiuIjhcBzwqQRDYrMg==", "boat"=>{"name"=>"Boaty", "capacity"=>"334", "location"=>"Neverland, 2nd Star to the Right"}, "user"=>"2", "commit"=>"Create New Boat"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/boats_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boats_controller.rb:35
+  [1m[36mBoat Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "boats" WHERE "boats"."name" = ? LIMIT ?[0m  [["name", "Boaty"], ["LIMIT", 1]]
+  ↳ app/controllers/boats_controller.rb:35
+  [1m[36mBoat Create (0.5ms)[0m  [1m[32mINSERT INTO "boats" ("created_at", "updated_at", "name", "capacity", "location", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2018-05-14 20:33:49.897045"], ["updated_at", "2018-05-14 20:33:49.897045"], ["name", "Boaty"], ["capacity", 334], ["location", "Neverland, 2nd Star to the Right"], ["user_id", 1]]
+  ↳ app/controllers/boats_controller.rb:35
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/boats_controller.rb:35
+Redirected to http://localhost:3000/boats
+Completed 302 Found in 14ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/boats" for 127.0.0.1 at 2018-05-14 16:33:49 -0400
+Processing by BoatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering boats/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT "boats".* FROM "boats" WHERE "boats"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/boats/index.html.erb:17
+  Rendered boats/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 69ms (Views: 61.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-05-14 16:33:54 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TWXJn7k6koSfsTI/u9KBVuj6kujSrpTSbnKzSc8FO1QMlsfCAmolxr2bsva6+Nk3k0DBfKDJYG/k8btf923Lgg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:33:54 -0400
+Processing by BookingsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-14 16:33:54 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-14 16:33:56 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-14 16:34:05 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rP7McF9XG66TwiiHIct1Rbd0RCRdH36aV0n6vwIlS8a1d5ZqNQL+i8Ghdo8QLviRdGKJtm4B6Ri0a+O1ocAkig==", "user"=>{"email"=>"blanky@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "blanky@email.com"], ["LIMIT", 1]]
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "blanky@email.com"], ["encrypted_password", "$2a$11$8JhI78iZzqr/5eLe48j0IuChrFmhfm7cEYIECRZf4nHZNznTnGiga"], ["created_at", "2018-05-14 20:34:05.923328"], ["updated_at", "2018-05-14 20:34:05.923328"]]
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-05-14 20:34:05.932389"], ["last_sign_in_at", "2018-05-14 20:34:05.932389"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-05-14 20:34:05.933008"], ["id", 3]]
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 164ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:34:05 -0400
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.2ms)[0m  [1m[34mSELECT "boats".* FROM "boats"[0m
+  ↳ app/helpers/bookings_helper.rb:6
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/helpers/bookings_helper.rb:15
+  Rendered bookings/_form.html.erb (3.9ms)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:25
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT  "boats".* FROM "boats" WHERE "boats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:34
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/bookings/index.html.erb:35
+  Rendered bookings/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 52ms (Views: 44.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/boats" for 127.0.0.1 at 2018-05-14 16:34:08 -0400
+Processing by BoatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering boats/index.html.erb within layouts/application
+  [1m[36mBoat Load (0.1ms)[0m  [1m[34mSELECT "boats".* FROM "boats" WHERE "boats"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/boats/index.html.erb:17
+  Rendered boats/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 42ms (Views: 37.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-05-14 16:34:11 -0400
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 33.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-05-14 16:34:23 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ltkkjgqj3Dd/3usZeTGs6AzNWxBEPh5bM2n9GtaYfOFTH6h/CQULtQj4222KqEJzvmPLd8H0siqCUrxa1xSUKA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/foreverautumn/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:34:23 -0400
+Processing by BookingsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-14 16:34:23 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+

@@ -15,13 +15,17 @@ include BookingsHelper
   def index
     @booking = Booking.new
     @bookings = Booking.all
+    @booking.save
+    respond_to do |format|
+      format.js
+    end
   end
 
   def show
     @bookings = Booking.all
     @boat = Boat.all
     @job = Job.all
-  end                                                         
+  end
 
 
   def create

@@ -15,10 +15,6 @@ include BookingsHelper
   def index
     @booking = Booking.new
     @bookings = Booking.all
-    @booking.save
-    respond_to do |format|
-      format.js
-    end
   end
 
   def show

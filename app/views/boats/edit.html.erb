@@ -12,7 +12,8 @@
       		<%= f.text_field :capacity %> <br><br><br>
 
           <%= f.label "Location of Boat:" %> <br>
-          <%= f.text_field :location %> <br><br><br>
+          <%= f.select :location, [["Penns Landing, PA, USA","Penns Landing, PA, USA" ], ["Neverland, 2nd Star to the Right", "Neverland, 2nd Star to the Right"], ["San Antonio, TX, USA", "San Antonio, TX, USA"], ["Frankfurt, Germany", "Frankfurt, Germany"], ["Hong Kong, China", "Hong Kong, China"], ["London, Paris", "London, Paris"] ] %> <br><br>
+
 
 
          <br><br><br>

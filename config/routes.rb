@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   # resources :sessions
   resources :jobs
   resources :boats
-  resources :entries, defaults: { format: 'json' }
 
 
 

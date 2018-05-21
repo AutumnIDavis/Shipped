@@ -25,25 +25,19 @@ include BookingsHelper
 
 
   def create
-    existing = Booking.where(booking_params).first
-    if existing
-      respond_to do |format|
-        format.html { redirect_to bookings_url, notice: "#{existing.boat.name} has already been assigned to #{existing.job.name}"}
-      end
-    else
-      booking = Booking.new(booking_params)
-      p '***********************************'
-      p booking_params
-      p booking
-      if booking.save
+    # existing = Booking.where(booking_params).first
+     # if existing
+     #  respond_to do |format|
+     #    # format.html { redirect_to bookings_url, notice: "#{existing.boat.name} has already been assigned to #{existing.job.name}"}
+     # end
+    # else
+      @booking = Booking.new(booking_params)
+      if @booking.save
         respond_to do |format|
           format.js
-          format.html { redirect_to bookings_url }
+        # end
         end
-      else
-        redirect_to bookings_path
       end
-    end
   end
 
 
